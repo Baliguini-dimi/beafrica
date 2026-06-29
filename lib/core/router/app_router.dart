@@ -26,6 +26,9 @@ import '../../features/auth/presentation/screens/forgot_password_screen.dart';
 // Screens — Home
 import '../../features/home/presentation/screens/home_screen.dart';
 
+// Screens — Meteo
+import '../../features/meteo/presentation/screens/meteo_screen.dart';
+
 class AppRouter {
   AppRouter._();
 
@@ -55,7 +58,6 @@ class AppRouter {
   static final GoRouter router = GoRouter(
     initialLocation: splash,
     debugLogDiagnostics: false,
-
     redirect: (BuildContext context, GoRouterState state) async {
       if (state.matchedLocation == splash) return null;
 
@@ -67,7 +69,6 @@ class AppRouter {
       }
       return null;
     },
-
     routes: [
       // Splash
       GoRoute(path: splash, builder: (context, state) => const SplashScreen()),
@@ -166,11 +167,7 @@ class AppRouter {
       ),
       GoRoute(
         path: meteo,
-        builder: (context, state) => const ComingSoonScreen(
-          moduleName: 'Météo',
-          moduleDescription: 'La météo des villes principales de RCA.',
-          icon: Icons.wb_sunny_outlined,
-        ),
+        builder: (context, state) => const MeteoScreen(),
       ),
       GoRoute(
         path: chatbot,

@@ -1,5 +1,6 @@
 // lib/features/settings/presentation/screens/about_screen.dart
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_spacing.dart';
 import '../../../../core/constants/app_typography.dart';
@@ -161,19 +162,36 @@ class AboutScreen extends StatelessWidget {
                       _ContactButton(
                         icon: Icons.email_outlined,
                         label: 'Email',
-                        onTap: () {},
+                        onTap: () async {
+                          final uri = Uri.parse('mailto:dbaliguini@gmail.com');
+                          if (await canLaunchUrl(uri)) await launchUrl(uri);
+                        },
                       ),
                       const SizedBox(width: AppSpacing.md),
                       _ContactButton(
                         icon: Icons.code,
                         label: 'GitHub',
-                        onTap: () {},
+                        onTap: () async {
+                          final uri =
+                              Uri.parse('https://github.com/Baliguini-dimi');
+                          if (await canLaunchUrl(uri)) {
+                            await launchUrl(uri,
+                                mode: LaunchMode.externalApplication);
+                          }
+                        },
                       ),
                       const SizedBox(width: AppSpacing.md),
                       _ContactButton(
                         icon: Icons.work_outline,
                         label: 'LinkedIn',
-                        onTap: () {},
+                        onTap: () async {
+                          final uri = Uri.parse(
+                              'https://www.linkedin.com/in/dimitri-nelson-baligini-demba-4b17b32ba');
+                          if (await canLaunchUrl(uri)) {
+                            await launchUrl(uri,
+                                mode: LaunchMode.externalApplication);
+                          }
+                        },
                       ),
                     ],
                   ),
