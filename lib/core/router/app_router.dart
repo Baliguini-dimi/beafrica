@@ -29,6 +29,14 @@ import '../../features/home/presentation/screens/home_screen.dart';
 // Screens — Meteo
 import '../../features/meteo/presentation/screens/meteo_screen.dart';
 
+// Screens — Medias
+import '../../features/medias/presentation/screens/medias_screen.dart';
+import '../../features/medias/presentation/screens/article_detail_screen.dart';
+import '../../models/article_model.dart';
+
+// Screens — Radio
+import '../../features/radio/presentation/screens/radio_screen.dart';
+
 class AppRouter {
   AppRouter._();
 
@@ -51,6 +59,7 @@ class AppRouter {
   static const String devises = '/devises';
   static const String meteo = '/meteo';
   static const String chatbot = '/chatbot';
+  static const String radio = '/radio';
   static const String settings = '/settings';
   static const String about = '/about';
   static const String privacy = '/privacy';
@@ -98,11 +107,7 @@ class AppRouter {
           GoRoute(path: home, builder: (context, state) => const HomeScreen()),
           GoRoute(
             path: medias,
-            builder: (context, state) => const ComingSoonScreen(
-              moduleName: 'Médias & Actualités',
-              moduleDescription: 'Les dernières nouvelles de RCA.',
-              icon: Icons.newspaper_outlined,
-            ),
+            builder: (context, state) => const MediasScreen(),
           ),
           GoRoute(
             path: histoire,
@@ -176,6 +181,17 @@ class AppRouter {
           moduleDescription: 'Votre guide intelligent sur la RCA.',
           icon: Icons.chat_outlined,
         ),
+      ),
+      GoRoute(
+        path: radio,
+        builder: (context, state) => const RadioScreen(),
+      ),
+      GoRoute(
+        path: '/article',
+        builder: (context, state) {
+          final article = state.extra as ArticleModel;
+          return ArticleDetailScreen(article: article);
+        },
       ),
 
       // Settings
