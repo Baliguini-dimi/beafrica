@@ -10,37 +10,52 @@ import '../../features/onboarding/presentation/screens/onboarding_screen.dart';
 // Screens — Main Shell
 import '../../shared/widgets/main_shell.dart';
 
-// Screens — Placeholders (seront remplacés sprint par sprint)
+// Screens — Placeholders
 import '../../shared/widgets/coming_soon_screen.dart';
+
+// Screens — Settings
+import '../../features/settings/presentation/screens/settings_screen.dart';
+import '../../features/settings/presentation/screens/about_screen.dart';
+import '../../features/settings/presentation/screens/privacy_screen.dart';
+
+// Screens — Auth
+import '../../features/auth/presentation/screens/login_screen.dart';
+import '../../features/auth/presentation/screens/register_screen.dart';
+import '../../features/auth/presentation/screens/forgot_password_screen.dart';
+
+// Screens — Home
+import '../../features/home/presentation/screens/home_screen.dart';
 
 class AppRouter {
   AppRouter._();
 
-  // Clé pour savoir si l'onboarding a déjà été vu
   static const String _onboardingKey = 'onboarding_done';
 
-  // Noms des routes — on utilise des constantes pour éviter les typos
-  static const String splash      = '/';
-  static const String onboarding  = '/onboarding';
-  static const String home        = '/home';
-  static const String medias      = '/medias';
-  static const String histoire    = '/histoire';
-  static const String marche      = '/marche';
-  static const String communaute  = '/communaute';
-  static const String culture     = '/culture';
-  static const String astuces     = '/astuces';
+  // === ROUTES ===
+  static const String splash = '/';
+  static const String onboarding = '/onboarding';
+  static const String login = '/login';
+  static const String register = '/register';
+  static const String forgotPassword = '/forgot-password';
+  static const String home = '/home';
+  static const String medias = '/medias';
+  static const String histoire = '/histoire';
+  static const String marche = '/marche';
+  static const String communaute = '/communaute';
+  static const String culture = '/culture';
+  static const String astuces = '/astuces';
   static const String dictionnaire = '/dictionnaire';
-  static const String devises     = '/devises';
-  static const String meteo       = '/meteo';
-  static const String chatbot     = '/chatbot';
+  static const String devises = '/devises';
+  static const String meteo = '/meteo';
+  static const String chatbot = '/chatbot';
+  static const String settings = '/settings';
+  static const String about = '/about';
+  static const String privacy = '/privacy';
 
   static final GoRouter router = GoRouter(
     initialLocation: splash,
     debugLogDiagnostics: false,
 
-    // redirect : vérifie si l'onboarding a été vu
-    // Si non → redirige vers /onboarding
-    // Si oui → laisse passer
     redirect: (BuildContext context, GoRouterState state) async {
       if (state.matchedLocation == splash) return null;
 
@@ -55,10 +70,7 @@ class AppRouter {
 
     routes: [
       // Splash
-      GoRoute(
-        path: splash,
-        builder: (context, state) => const SplashScreen(),
-      ),
+      GoRoute(path: splash, builder: (context, state) => const SplashScreen()),
 
       // Onboarding
       GoRoute(
@@ -66,18 +78,23 @@ class AppRouter {
         builder: (context, state) => const OnboardingScreen(),
       ),
 
-      // Shell principal avec BottomNavigationBar
+      // Auth
+      GoRoute(path: login, builder: (context, state) => const LoginScreen()),
+      GoRoute(
+        path: register,
+        builder: (context, state) => const RegisterScreen(),
+      ),
+      GoRoute(
+        path: forgotPassword,
+        builder: (context, state) => const ForgotPasswordScreen(),
+      ),
+
+      // Shell principal
       ShellRoute(
         builder: (context, state, child) => MainShell(child: child),
         routes: [
-          GoRoute(
-            path: home,
-            builder: (context, state) => const ComingSoonScreen(
-              moduleName: 'Accueil',
-              moduleDescription: 'Votre tableau de bord centrafricain.',
-              icon: Icons.home_outlined,
-            ),
-          ),
+          // Home — vrai écran maintenant
+          GoRoute(path: home, builder: (context, state) => const HomeScreen()),
           GoRoute(
             path: medias,
             builder: (context, state) => const ComingSoonScreen(
@@ -98,7 +115,8 @@ class AppRouter {
             path: marche,
             builder: (context, state) => const ComingSoonScreen(
               moduleName: 'Marché',
-              moduleDescription: 'Achetez et vendez des produits centrafricains.',
+              moduleDescription:
+                  'Achetez et vendez des produits centrafricains.',
               icon: Icons.storefront_outlined,
             ),
           ),
@@ -113,7 +131,7 @@ class AppRouter {
         ],
       ),
 
-      // Routes secondaires (accessibles depuis menu/accueil)
+      // Routes secondaires
       GoRoute(
         path: culture,
         builder: (context, state) => const ComingSoonScreen(
@@ -161,6 +179,17 @@ class AppRouter {
           moduleDescription: 'Votre guide intelligent sur la RCA.',
           icon: Icons.chat_outlined,
         ),
+      ),
+
+      // Settings
+      GoRoute(
+        path: settings,
+        builder: (context, state) => const SettingsScreen(),
+      ),
+      GoRoute(path: about, builder: (context, state) => const AboutScreen()),
+      GoRoute(
+        path: privacy,
+        builder: (context, state) => const PrivacyScreen(),
       ),
     ],
   );

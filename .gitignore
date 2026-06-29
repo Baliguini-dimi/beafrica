@@ -26,3 +26,15 @@ Thumbs.db
 
 # Tests
 coverage/
+# Crash logs
+*.log
+hs_err_pid*
+replay_pid*
+
+# Java heap dumps
+*.hprof
+
+# Android Studio
+.idea/
+.gradle/
+build/

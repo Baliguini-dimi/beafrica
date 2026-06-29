@@ -62,10 +62,10 @@ dev_dependencies:
 flutter_launcher_icons:
   android: true
   ios: false
-  image_path: "assets/images/logo/beafrica_logo.png"
+  image_path: "assets/images/logo/beafrica_icon.png"
   min_sdk_android: 23
   adaptive_icon_background: "#F8F6F2"
-  adaptive_icon_foreground: "assets/images/logo/beafrica_logo.png"
+  adaptive_icon_foreground: "assets/images/logo/beafrica_icon.png"
 
 flutter:
   uses-material-design: true
@@ -74,6 +74,7 @@ flutter:
     - assets/images/logo/
     - assets/images/onboarding/
     - assets/images/placeholders/
+    - assets/images/about/
     - assets/icons/meteo/
     - assets/data/
     - .env
