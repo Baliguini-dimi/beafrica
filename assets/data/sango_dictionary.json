@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "id": "salutations",
+      "label": "Salutations & Politesse",
+      "entries": [
+        {"id": "sal_001", "french": "Saluer / Bonjour", "sango": "Bara", "phonetic": "ba-ra", "category": "salutations", "example": "Bara mo (je te salue)"},
+        {"id": "sal_002", "french": "Comment vas-tu ?", "sango": "Tongana nye?", "phonetic": "tô-nga-na-nyé", "category": "salutations"},
+        {"id": "sal_003", "french": "Je vais bien", "sango": "Mbi yeke nzoni", "phonetic": "mbi yé-ké nzo-ni", "category": "salutations"},
+        {"id": "sal_004", "french": "Merci", "sango": "Singila", "phonetic": "si-ngi-la", "category": "salutations"},
+        {"id": "sal_005", "french": "S'il te plaît", "sango": "Tö bê tî mo", "phonetic": "tö bê ti mo", "category": "salutations"},
+        {"id": "sal_006", "french": "Pardon / Excuse-moi", "sango": "Pardon", "phonetic": "par-don", "category": "salutations"},
+        {"id": "sal_007", "french": "Au revoir", "sango": "Ke na pekô", "phonetic": "ké na pé-kô", "category": "salutations"},
+        {"id": "sal_008", "french": "Bienvenue", "sango": "Wara nzoni", "phonetic": "wa-ra nzo-ni", "category": "salutations"}
+      ]
+    },
+    {
+      "id": "chiffres",
+      "label": "Chiffres",
+      "entries": [
+        {"id": "ch_000", "french": "Zéro", "sango": "Pärä", "phonetic": "pä-rä", "category": "chiffres"},
+        {"id": "ch_001", "french": "Un", "sango": "Ôko", "phonetic": "ô-ko", "category": "chiffres"},
+        {"id": "ch_002", "french": "Deux", "sango": "Ûse", "phonetic": "û-se", "category": "chiffres"},
+        {"id": "ch_003", "french": "Trois", "sango": "Otâ", "phonetic": "o-tâ", "category": "chiffres"},
+        {"id": "ch_004", "french": "Quatre", "sango": "Usïö", "phonetic": "u-sï-ö", "category": "chiffres"},
+        {"id": "ch_005", "french": "Cinq", "sango": "Ukü", "phonetic": "u-kü", "category": "chiffres"},
+        {"id": "ch_006", "french": "Six", "sango": "Omënë", "phonetic": "o-më-në", "category": "chiffres"},
+        {"id": "ch_007", "french": "Sept", "sango": "Mbâsâmbâlâ", "phonetic": "mbâ-sâ-mbâ-lâ", "category": "chiffres"},
+        {"id": "ch_008", "french": "Huit", "sango": "Miombe", "phonetic": "mi-om-be", "category": "chiffres"},
+        {"id": "ch_009", "french": "Neuf", "sango": "Gümbâyäwen", "phonetic": "güm-bâ-yä-wen", "category": "chiffres"},
+        {"id": "ch_010", "french": "Dix", "sango": "Balë ôko", "phonetic": "ba-lë ô-ko", "category": "chiffres"}
+      ]
+    },
+    {
+      "id": "famille",
+      "label": "Famille & Relations",
+      "entries": [
+        {"id": "fam_001", "french": "Père", "sango": "Babâ", "phonetic": "ba-bâ", "category": "famille"},
+        {"id": "fam_002", "french": "Mère", "sango": "Mamâ", "phonetic": "ma-mâ", "category": "famille"},
+        {"id": "fam_003", "french": "Enfant", "sango": "Môlengê", "phonetic": "mô-len-gê", "category": "famille"},
+        {"id": "fam_004", "french": "Ami", "sango": "Bibe", "phonetic": "bi-be", "category": "famille"},
+        {"id": "fam_005", "french": "Famille", "sango": "Sêwa", "phonetic": "sê-wa", "category": "famille"}
+      ]
+    },
+    {
+      "id": "pronoms",
+      "label": "Pronoms",
+      "entries": [
+        {"id": "pro_001", "french": "Je / Moi", "sango": "Mbï", "phonetic": "mbï", "category": "pronoms"},
+        {"id": "pro_002", "french": "Tu / Toi", "sango": "Mo", "phonetic": "mo", "category": "pronoms"},
+        {"id": "pro_003", "french": "Il / Elle", "sango": "Lo", "phonetic": "lo", "category": "pronoms"},
+        {"id": "pro_004", "french": "Nous", "sango": "Ë", "phonetic": "ë", "category": "pronoms"},
+        {"id": "pro_005", "french": "Vous", "sango": "Ï", "phonetic": "ï", "category": "pronoms"},
+        {"id": "pro_006", "french": "Ils / Elles", "sango": "Âla", "phonetic": "â-la", "category": "pronoms"}
+      ]
+    },
+    {
+      "id": "nourriture",
+      "label": "Nourriture & Boissons",
+      "entries": [
+        {"id": "nou_001", "french": "Eau", "sango": "Ngû", "phonetic": "ngû", "category": "nourriture"},
+        {"id": "nou_002", "french": "Manioc", "sango": "Kâsa", "phonetic": "kâ-sa", "category": "nourriture"},
+        {"id": "nou_003", "french": "Sauce", "sango": "Kâsa", "phonetic": "kâ-sa", "category": "nourriture", "example": "fû kâsa (servir une sauce)"},
+        {"id": "nou_004", "french": "Vêtement / Tissu", "sango": "Bongo", "phonetic": "bon-go", "category": "nourriture"}
+      ]
+    },
+    {
+      "id": "verbes",
+      "label": "Verbes courants",
+      "entries": [
+        {"id": "verb_001", "french": "Être", "sango": "Yeke", "phonetic": "yé-ké", "category": "verbes", "example": "mo yeke (tu es)"},
+        {"id": "verb_002", "french": "Saluer", "sango": "Bara", "phonetic": "ba-ra", "category": "verbes"},
+        {"id": "verb_003", "french": "Savoir / Connaître", "sango": "Hînga", "phonetic": "hîn-ga", "category": "verbes"},
+        {"id": "verb_004", "french": "Coudre", "sango": "Fü", "phonetic": "fü", "category": "verbes", "example": "fü bongo (coudre un vêtement)"}
+      ]
+    },
+    {
+      "id": "expressions",
+      "label": "Expressions utiles",
+      "entries": [
+        {"id": "exp_001", "french": "Mon pays", "sango": "Ködörö tî mbï", "phonetic": "kö-dö-rö ti mbï", "category": "expressions"},
+        {"id": "exp_002", "french": "Langue Sango", "sango": "Yângâ tî sängö", "phonetic": "yân-gâ ti sän-gö", "category": "expressions"},
+        {"id": "exp_003", "french": "Un peu", "sango": "Kêtê sï", "phonetic": "kê-tê sï", "category": "expressions"},
+        {"id": "exp_004", "french": "Beaucoup", "sango": "Mîngi", "phonetic": "mîn-gi", "category": "expressions"},
+        {"id": "exp_005", "french": "Il y a longtemps", "sango": "Ândö giriri", "phonetic": "ân-dö gi-ri-ri", "category": "expressions"}
+      ]
+    }
+  ]
+}

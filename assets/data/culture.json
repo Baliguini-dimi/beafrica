@@ -1,0 +1,136 @@
+{
+  "gastronomie": [
+    {
+      "id": "plat_001",
+      "name": "Gozo",
+      "description": "Le plat national de la RCA. Boule de farine de manioc cuite à l'eau, d'une consistance élastique et neutre en goût. Elle accompagne tous les plats en sauce et se mange avec les doigts.",
+      "ingredients": ["Farine de manioc", "Eau", "Sel"],
+      "region": "National",
+      "type": "Plat principal"
+    },
+    {
+      "id": "plat_002",
+      "name": "Kanda",
+      "description": "Boulettes de viande fumée ou de poisson pilé, enveloppées dans des feuilles et cuites à la vapeur ou grillées. Riches en protéines, souvent servies avec le Gozo.",
+      "ingredients": ["Viande fumée ou poisson", "Feuilles de bananier", "Épices locales"],
+      "region": "Sud et Centre",
+      "type": "Plat principal"
+    },
+    {
+      "id": "plat_003",
+      "name": "Ngouza",
+      "description": "Sauce à base de feuilles de manioc pilées, cuites longuement avec de l'huile de palme et des épices. Accompagnement classique du Gozo.",
+      "ingredients": ["Feuilles de manioc", "Huile de palme", "Oignon", "Piment", "Sel"],
+      "region": "National",
+      "type": "Sauce"
+    },
+    {
+      "id": "plat_004",
+      "name": "Mousgoua",
+      "description": "Beignets frits à base de farine de manioc ou de maïs, souvent sucrés ou salés. Collation populaire vendue dans les marchés de Bangui.",
+      "ingredients": ["Farine de manioc", "Huile de friture", "Sucre ou sel"],
+      "region": "Bangui et environs",
+      "type": "Collation"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "instr_001",
+      "name": "Balafon",
+      "description": "Xylophone africain à lames de bois, chaque lame étant surmontée d'une calebasse résonnante. Instrument central des cérémonies et fêtes centrafricaines.",
+      "peoples": ["Gbaya", "Banda", "Baya"],
+      "occasions": "Cérémonies, fêtes, rituels"
+    },
+    {
+      "id": "instr_002",
+      "name": "Likembe",
+      "description": "Aussi appelé 'piano à pouces' ou 'sanza'. Petit instrument à lamelles métalliques ou de bambou. Instrument intime, joué individuellement.",
+      "peoples": ["Zande", "Banda"],
+      "occasions": "Usage personnel, soirées familiales"
+    },
+    {
+      "id": "instr_003",
+      "name": "Tam-tam",
+      "description": "Tambour traditionnel, sculpté dans un tronc d'arbre creusé avec une peau d'animal tendue. Cœur battant des rythmes centrafricains.",
+      "peoples": ["Toutes ethnies"],
+      "occasions": "Cérémonies, danses, transmission de messages"
+    },
+    {
+      "id": "instr_004",
+      "name": "Ngombi",
+      "description": "Harpe traditionnelle à plusieurs cordes, jouée principalement dans les régions forestières du sud du pays.",
+      "peoples": ["Aka", "Gbaya"],
+      "occasions": "Rituels, contes musicaux"
+    }
+  ],
+  "danses": [
+    {
+      "id": "danse_001",
+      "name": "Hindewho",
+      "description": "Danse-chant polyphonique pratiquée par les pygmées Aka, mêlant sifflements rythmiques et mouvements de groupe dans la forêt.",
+      "occasion": "Chasse, rituels forestiers",
+      "origin": "Peuple Aka"
+    },
+    {
+      "id": "danse_002",
+      "name": "Gbégé",
+      "description": "Danse traditionnelle énergique accompagnée de percussions, exécutée lors des grandes célébrations communautaires.",
+      "occasion": "Mariages, fêtes de récolte",
+      "origin": "Peuple Gbaya"
+    },
+    {
+      "id": "danse_003",
+      "name": "Kobola",
+      "description": "Danse rituelle pratiquée lors des cérémonies d'initiation, riche en symbolisme et en mouvements codifiés.",
+      "occasion": "Cérémonies d'initiation",
+      "origin": "Peuple Banda"
+    }
+  ],
+  "artisanat": [
+    {
+      "id": "art_001",
+      "name": "Poterie",
+      "description": "Art ancestral pratiqué principalement par les femmes, utilisant l'argile locale pour créer ustensiles et objets décoratifs."
+    },
+    {
+      "id": "art_002",
+      "name": "Vannerie",
+      "description": "Tressage de fibres végétales pour créer paniers, nattes et objets utilitaires, transmis de génération en génération."
+    },
+    {
+      "id": "art_003",
+      "name": "Sculpture sur bois",
+      "description": "Art traditionnel représentant masques, statuettes et objets rituels, porteurs de symbolisme spirituel et culturel."
+    },
+    {
+      "id": "art_004",
+      "name": "Bijoux traditionnels",
+      "description": "Création de bijoux à partir de perles, métaux et matériaux locaux, portés lors des cérémonies et événements importants."
+    },
+    {
+      "id": "art_005",
+      "name": "Tissage",
+      "description": "Production de tissus traditionnels aux motifs colorés, reflétant l'identité culturelle des différents peuples de RCA."
+    }
+  ],
+  "tenues": [
+    {
+      "id": "tenue_001",
+      "peuple": "Gbaya",
+      "occasion": "Cérémonies traditionnelles",
+      "description": "Tenues colorées ornées de motifs géométriques, souvent accompagnées de parures en perles et coiffes traditionnelles."
+    },
+    {
+      "id": "tenue_002",
+      "peuple": "Banda",
+      "occasion": "Fêtes et mariages",
+      "description": "Costumes traditionnels aux teintes vives, agrémentés de bijoux artisanaux et de tissus aux motifs symboliques."
+    },
+    {
+      "id": "tenue_003",
+      "peuple": "Zande",
+      "occasion": "Rituels et célébrations",
+      "description": "Tenues distinctives reflétant le statut social, ornées de motifs caractéristiques de l'identité Zande."
+    }
+  ]
+}

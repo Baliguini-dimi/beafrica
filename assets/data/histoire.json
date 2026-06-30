@@ -1,0 +1,175 @@
+{
+  "version": "1.0",
+  "chronologie": [
+    {
+      "id": "hist_001",
+      "title": "Les premiers peuples de Centrafrique",
+      "description": "Dès la préhistoire, les pygmées Aka peuplent les forêts du sud-ouest de l'actuelle RCA, développant une civilisation forestière unique en harmonie avec leur environnement.",
+      "year": -50000,
+      "era": "precolonial",
+      "personnages": []
+    },
+    {
+      "id": "hist_002",
+      "title": "Migration des peuples Banda et Gbaya",
+      "description": "Entre le 16e et le 18e siècle, les grands peuples Banda et Gbaya migrent vers le bassin de l'Oubangui, façonnant la composition ethnique du territoire centrafricain.",
+      "year": 1650,
+      "era": "precolonial",
+      "personnages": []
+    },
+    {
+      "id": "hist_003",
+      "title": "Sultanat du Dar al-Kuti",
+      "description": "Fondé au 19e siècle dans le nord de l'actuelle RCA, le Sultanat du Dar al-Kuti devient une puissance régionale importante contrôlant les routes commerciales.",
+      "year": 1830,
+      "era": "precolonial",
+      "personnages": ["Muhammad al-Sanusi"]
+    },
+    {
+      "id": "hist_004",
+      "title": "Conquête coloniale française",
+      "description": "La France s'impose progressivement sur le territoire centrafricain à partir de 1889. L'Oubangui-Chari est rattaché à l'Afrique Équatoriale Française (AEF).",
+      "year": 1889,
+      "era": "colonial",
+      "personnages": []
+    },
+    {
+      "id": "hist_005",
+      "title": "Naissance de Barthélémy Boganda",
+      "description": "Barthélémy Boganda naît le 4 avril 1910 à Bobangui. Orphelin très tôt, il est élevé par des missionnaires catholiques. Il sera ordonné premier prêtre catholique centrafricain en 1938.",
+      "year": 1910,
+      "era": "colonial",
+      "personnages": ["Barthélémy Boganda"]
+    },
+    {
+      "id": "hist_006",
+      "title": "Fondation du MESAN",
+      "description": "En 1949, Boganda fonde le Mouvement pour l'Évolution Sociale de l'Afrique Noire (MESAN), premier parti politique centrafricain.",
+      "year": 1949,
+      "era": "colonial",
+      "personnages": ["Barthélémy Boganda"]
+    },
+    {
+      "id": "hist_007",
+      "title": "Indépendance de la République Centrafricaine",
+      "description": "Le 13 août 1960, la République Centrafricaine accède à l'indépendance. Barthélémy Boganda avait péri dans un crash aérien le 29 mars 1959. C'est David Dacko qui préside aux destinées du jeune État.",
+      "year": 1960,
+      "era": "independance",
+      "personnages": ["David Dacko"]
+    }
+  ],
+  "personnages": [
+    {
+      "id": "pers_001",
+      "name": "Barthélémy Boganda",
+      "title": "Père fondateur de la République Centrafricaine",
+      "biography": "Né le 4 avril 1910 à Bobangui, Barthélémy Boganda est orphelin dès l'enfance. Élevé par les Pères spiritains, il devient en 1938 le premier prêtre catholique centrafricain. Fondateur du MESAN en 1949, défenseur acharné des droits des Centrafricains, il rêvait des États-Unis d'Afrique Latine. Sa mort tragique dans un accident d'avion le 29 mars 1959 prive la RCA de son guide le plus visionnaire.",
+      "impact": "Boganda a posé les fondements moraux, politiques et identitaires de la RCA. Sa devise 'Zo Kwe Zo' (Tout homme est un homme) reste l'âme de la nation.",
+      "birth_year": "1910",
+      "death_year": "1959",
+      "category": "fondateur",
+      "image_url": null
+    },
+    {
+      "id": "pers_002",
+      "name": "Guerriers Gbaya",
+      "title": "Résistants du peuple Gbaya",
+      "biography": "Au tournant du 20e siècle, les peuples Gbaya opposent une résistance farouche à la pénétration coloniale française. Les guerriers Gbaya défendent leurs terres, leurs familles et leurs traditions au prix de leur vie.",
+      "impact": "La résistance Gbaya a incarné le refus de la domination et la défense de l'identité culturelle centrafricaine face à la colonisation.",
+      "birth_year": null,
+      "death_year": null,
+      "category": "guerrier",
+      "image_url": null
+    }
+  ],
+  "royaumes": [
+    {
+      "id": "roy_001",
+      "name": "Sultanat du Dar al-Kuti",
+      "period": "Vers 1830 – 1911",
+      "description": "État islamique fondé dans le nord de l'actuelle RCA, le Sultanat du Dar al-Kuti était un centre commercial et culturel important. Il contrôlait les routes caravanières reliant le Soudan au bassin du Congo.",
+      "territoire": "Nord de la RCA, région de Ndélé",
+      "key_figures": ["Muhammad al-Sanusi"]
+    },
+    {
+      "id": "roy_002",
+      "name": "Royaume Zande",
+      "period": "16e – 19e siècle",
+      "description": "Le peuple Zande, établi dans le sud-est de la RCA, a développé un royaume organisé et une culture riche. Connus pour leur art de la guerre et leur artisanat, les Zande ont maintenu leur identité face aux pressions extérieures.",
+      "territoire": "Sud-est de la RCA",
+      "key_figures": []
+    },
+    {
+      "id": "roy_003",
+      "name": "Royaume Banda",
+      "period": "17e – 19e siècle",
+      "description": "Le peuple Banda, l'un des plus importants de la RCA, a constitué plusieurs entités politiques dans le centre et l'est du pays. Agriculteurs et guerriers, les Banda ont marqué profondément la culture centrafricaine.",
+      "territoire": "Centre et est de la RCA",
+      "key_figures": []
+    }
+  ],
+  "contes": [
+    {
+      "id": "conte_001",
+      "title": "L'araignée et le tambour du ciel",
+      "type": "conte",
+      "origin": "Gbaya",
+      "content": "Il y a bien longtemps, lorsque le monde était encore jeune, tous les animaux vivaient en paix sur la terre. Mais le tambour sacré qui donnait la pluie et la vie se trouvait au ciel, gardé par Nzambi, le dieu créateur.\n\nAraignée, la plus rusée de toutes les créatures, décida un jour qu'elle monterait au ciel pour voler le tambour. Ses amis l'en dissuadèrent : 'Nzambi te punira !' Mais Araignée sourit de ses huit yeux et répondit : 'La ruse vaut mieux que la force.'\n\nElle tissa un fil invisible entre la terre et le ciel. La nuit venue, elle grimpa lentement, silencieusement. Elle trouva Nzambi endormi et s'approcha du tambour sacré. Mais en tendant ses pattes pour le saisir, elle fit sonner une seule note.\n\nNzambi se réveilla en sursaut. Araignée, terrifiée, laissa tomber le tambour qui roula du ciel vers la terre dans un grand fracas de tonnerre. Les gouttes de pluie qui s'échappèrent du tambour brisé devinrent les premières pluies de la saison.\n\nDepuis ce jour, chaque année, le tonnerre rappelle la chute du tambour d'Araignée, et la pluie qui suit est le don involontaire de sa ruse à toute la terre.",
+      "moral": "L'ingéniosité peut apporter des bienfaits même dans l'échec.",
+      "image_url": null
+    },
+    {
+      "id": "conte_002",
+      "title": "Pourquoi le léopard a des taches",
+      "type": "mythe",
+      "origin": "Banda",
+      "content": "En ce temps-là, Léopard était entièrement doré, le plus beau des animaux de la forêt. Il le savait et ne manquait pas une occasion de le rappeler à ses compagnons.\n\nUn jour, Tortue l'interpella : 'Léopard, tu es beau, c'est vrai. Mais es-tu aussi sage ?' Léopard rit : 'La sagesse, à quoi ça sert quand on est aussi magnifique ?'\n\nTortue proposa un pari : 'Si tu peux traverser la forêt de nuit sans te faire repérer par les humains, je reconnais que ta beauté te suffit.' Léopard accepta.\n\nMais sa robe dorée brillait sous la lune comme un soleil. Les villageois le virent de loin et allumèrent des torches pour le chasser. Léopard courut, courut, mais les flammes des torches lui touchèrent la peau, laissant des marques noires sur son pelage doré.\n\nIl revint vers Tortue, penaud. 'Tu avais raison,' dit-il. 'Ma beauté m'a trahi.' 'Désormais,' répondit Tortue, 'tes taches te permettront de te fondre dans l'ombre et de chasser avec sagesse.'",
+      "moral": "L'orgueil de notre apparence peut être notre faiblesse. La sagesse vaut plus que la beauté.",
+      "image_url": null
+    }
+  ],
+  "proverbes": [
+    {
+      "id": "prov_001",
+      "sango": "Zo a yeke na li ti mbênî zo",
+      "french": "L'homme existe grâce à son prochain",
+      "explication": "Ce proverbe illustre la valeur fondamentale de la solidarité dans la culture centrafricaine. Aucun homme ne peut vivre et prospérer seul.",
+      "context": "Utilisé lors des cérémonies communautaires et des conseils de village."
+    },
+    {
+      "id": "prov_002",
+      "sango": "Ndeke a yeke na li ti ndeke",
+      "french": "L'oiseau vit avec son semblable",
+      "explication": "Un appel à l'unité et à la cohésion sociale. Les gens de même origine doivent s'entraider.",
+      "context": "Souvent dit pour encourager la solidarité entre membres d'une même communauté."
+    },
+    {
+      "id": "prov_003",
+      "sango": "Ngû a leke, kwa a leke",
+      "french": "L'eau coule, la pierre reste",
+      "explication": "Ce proverbe parle de la résilience face au changement. Les choses essentielles demeurent malgré les bouleversements de la vie.",
+      "context": "Dit en période de difficultés pour encourager la persévérance."
+    },
+    {
+      "id": "prov_004",
+      "sango": "Mabôkô ya tene a yeke na mbênî",
+      "french": "La parole donnée est sacrée",
+      "explication": "L'honneur et l'intégrité passent par le respect de sa parole. Dans la culture centrafricaine, la parole donnée a une valeur contractuelle forte.",
+      "context": "Rappel lors des accords et engagements entre personnes."
+    },
+    {
+      "id": "prov_005",
+      "sango": "Kötä a si yê ngbanga tî vuru",
+      "french": "L'aîné ne cache pas le chemin à ses cadets",
+      "explication": "Les anciens ont le devoir de guider les jeunes générations. La transmission du savoir est une obligation morale.",
+      "context": "Dit lors des cérémonies d'initiation ou d'enseignement."
+    },
+    {
+      "id": "prov_006",
+      "sango": "Nzoni a yeke na sô tî mbênî",
+      "french": "Le bien commence par soi-même",
+      "explication": "Pour contribuer positivement à la communauté, il faut d'abord se construire soi-même.",
+      "context": "Conseil donné aux jeunes en quête de sens."
+    }
+  ]
+}

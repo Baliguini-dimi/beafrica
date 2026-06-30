@@ -33,9 +33,28 @@ import '../../features/meteo/presentation/screens/meteo_screen.dart';
 import '../../features/medias/presentation/screens/medias_screen.dart';
 import '../../features/medias/presentation/screens/article_detail_screen.dart';
 import '../../models/article_model.dart';
+import '../../features/astuces/presentation/screens/astuces_screen.dart';
+import '../../features/astuces/presentation/screens/astuce_detail_screen.dart';
+import '../../models/astuce_model.dart';
+import '../../features/dictionnaire/presentation/screens/dictionnaire_screen.dart';
 
 // Screens — Radio
 import '../../features/radio/presentation/screens/radio_screen.dart';
+
+// Screens — Histoire
+import '../../features/histoire/presentation/screens/histoire_screen.dart';
+import '../../features/histoire/presentation/screens/chronologie_screen.dart';
+import '../../features/histoire/presentation/screens/personnages_screen.dart';
+import '../../features/histoire/presentation/screens/royaumes_screen.dart';
+import '../../features/histoire/presentation/screens/contes_screen.dart';
+import '../../features/histoire/presentation/screens/proverbes_screen.dart';
+
+// Screens — Culture
+import '../../features/culture/presentation/screens/culture_screen.dart';
+import '../../features/culture/presentation/screens/gastronomie_screen.dart';
+import '../../features/culture/presentation/screens/musique_screen.dart';
+import '../../features/culture/presentation/screens/artisanat_screen.dart';
+import '../../features/culture/presentation/screens/tenues_screen.dart';
 
 class AppRouter {
   AppRouter._();
@@ -55,11 +74,21 @@ class AppRouter {
   static const String communaute = '/communaute';
   static const String culture = '/culture';
   static const String astuces = '/astuces';
+  static const String astuceDetail = '/astuce-detail';
   static const String dictionnaire = '/dictionnaire';
   static const String devises = '/devises';
   static const String meteo = '/meteo';
   static const String chatbot = '/chatbot';
   static const String radio = '/radio';
+  static const String chronologie = '/chronologie';
+  static const String personnages = '/personnages';
+  static const String royaumes = '/royaumes';
+  static const String contes = '/contes';
+  static const String proverbes = '/proverbes';
+  static const String gastronomie = '/gastronomie';
+  static const String musique = '/musique';
+  static const String artisanat = '/artisanat';
+  static const String tenues = '/tenues';
   static const String settings = '/settings';
   static const String about = '/about';
   static const String privacy = '/privacy';
@@ -111,11 +140,7 @@ class AppRouter {
           ),
           GoRoute(
             path: histoire,
-            builder: (context, state) => const ComingSoonScreen(
-              moduleName: 'Histoire & Patrimoine',
-              moduleDescription: 'L\'encyclopédie culturelle de la RCA.',
-              icon: Icons.account_balance_outlined,
-            ),
+            builder: (context, state) => const HistoireScreen(),
           ),
           GoRoute(
             path: marche,
@@ -137,30 +162,63 @@ class AppRouter {
         ],
       ),
 
+      // Routes Histoire
+      GoRoute(
+        path: chronologie,
+        builder: (context, state) => const ChronologieScreen(),
+      ),
+      GoRoute(
+        path: personnages,
+        builder: (context, state) => const PersonnagesScreen(),
+      ),
+      GoRoute(
+        path: royaumes,
+        builder: (context, state) => const RoyaumesScreen(),
+      ),
+      GoRoute(
+        path: contes,
+        builder: (context, state) => const ContesScreen(),
+      ),
+      GoRoute(
+        path: proverbes,
+        builder: (context, state) => const ProverbesScreen(),
+      ),
+
       // Routes secondaires
       GoRoute(
         path: culture,
-        builder: (context, state) => const ComingSoonScreen(
-          moduleName: 'Culture & Artisanat',
-          moduleDescription: 'La richesse culturelle vivante de la RCA.',
-          icon: Icons.palette_outlined,
-        ),
+        builder: (context, state) => const CultureScreen(),
+      ),
+      GoRoute(
+        path: gastronomie,
+        builder: (context, state) => const GastronomieScreen(),
+      ),
+      GoRoute(
+        path: musique,
+        builder: (context, state) => const MusiqueScreen(),
+      ),
+      GoRoute(
+        path: artisanat,
+        builder: (context, state) => const ArtisanatScreen(),
+      ),
+      GoRoute(
+        path: tenues,
+        builder: (context, state) => const TenuesScreen(),
       ),
       GoRoute(
         path: astuces,
-        builder: (context, state) => const ComingSoonScreen(
-          moduleName: 'Astuces & Conseils',
-          moduleDescription: 'Guides pratiques pour vivre en RCA.',
-          icon: Icons.lightbulb_outlined,
-        ),
+        builder: (context, state) => const AstucesScreen(),
+      ),
+      GoRoute(
+        path: AppRouter.astuceDetail,
+        builder: (context, state) {
+          final astuce = state.extra as AstuceModel;
+          return AstuceDetailScreen(astuce: astuce);
+        },
       ),
       GoRoute(
         path: dictionnaire,
-        builder: (context, state) => const ComingSoonScreen(
-          moduleName: 'Dictionnaire Sango',
-          moduleDescription: 'Apprenez le Sango, langue nationale de la RCA.',
-          icon: Icons.menu_book_outlined,
-        ),
+        builder: (context, state) => const DictionnaireScreen(),
       ),
       GoRoute(
         path: devises,

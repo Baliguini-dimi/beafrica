@@ -1,0 +1,95 @@
+{
+  "categories": [
+    {
+      "id": "voyage",
+      "label": "Voyager en RCA",
+      "icon": "flight",
+      "articles": [
+        {
+          "id": "ast_001",
+          "title": "Visa et documents pour entrer en RCA",
+          "content": "Pour entrer en République Centrafricaine, la plupart des nationalités ont besoin d'un visa. Voici les étapes essentielles :\n\n1. Demande de visa : Contacter l'ambassade de RCA dans votre pays de résidence. Prévoir 2 à 4 semaines.\n\n2. Documents requis : Passeport valide (6 mois minimum), photos d'identité, justificatif d'hébergement, billet retour, carnet de vaccination international (fièvre jaune obligatoire).\n\n3. À l'arrivée : L'aéroport international Bangui M'Poko est le principal point d'entrée. Avoir du cash en FCFA ou en euros pour les éventuels frais.\n\n4. Sécurité : Consulter les avis du ministère des Affaires étrangères de votre pays avant le départ.",
+          "updated_at": "2024-01-15",
+          "category": "voyage"
+        },
+        {
+          "id": "ast_002",
+          "title": "Se déplacer à Bangui",
+          "content": "Bangui, la capitale, offre plusieurs moyens de transport :\n\n1. Taxi-brousse : Le moyen le plus courant et économique. Négocier le prix avant de monter.\n\n2. Mototaxi (zémidjan) : Rapide et pratique pour les courtes distances. Toujours convenir du prix à l'avance.\n\n3. Location de voiture : Disponible à Bangui, mais route parfois difficile hors de la capitale. Préférer un 4x4.\n\n4. À pied : Le centre-ville de Bangui est accessible à pied. Rester vigilant et éviter les sorties nocturnes dans les zones peu éclairées.",
+          "updated_at": "2024-01-15",
+          "category": "voyage"
+        }
+      ]
+    },
+    {
+      "id": "sante",
+      "label": "Santé en RCA",
+      "icon": "health_and_safety",
+      "articles": [
+        {
+          "id": "ast_003",
+          "title": "Vaccins et santé avant le départ",
+          "content": "La vaccination est cruciale avant tout voyage en RCA :\n\n1. Obligatoire : Fièvre jaune (certificat international requis à l'entrée).\n\n2. Fortement recommandés : Hépatite A, Hépatite B, Typhoïde, Méningite, Poliomyélite, Tétanos-diphtérie.\n\n3. Paludisme : La RCA est en zone à risque élevé. Prendre un traitement antipaludéen, utiliser des moustiquaires imprégnées et du répulsif.\n\n4. Eau : Ne boire que de l'eau en bouteille ou de l'eau bouillie. Éviter les glaçons.\n\nConsulter un médecin spécialisé en médecine tropicale 4 à 6 semaines avant le départ.",
+          "updated_at": "2024-01-15",
+          "category": "sante"
+        }
+      ]
+    },
+    {
+      "id": "argent",
+      "label": "Envoyer de l'argent",
+      "icon": "currency_exchange",
+      "articles": [
+        {
+          "id": "ast_004",
+          "title": "Comment envoyer de l'argent en RCA",
+          "content": "Plusieurs options pour envoyer des fonds vers la RCA :\n\n1. Western Union : Disponible dans de nombreuses agences à Bangui. Rapide, mais frais élevés.\n\n2. MoneyGram : Alternative à Western Union, disponible dans certaines banques.\n\n3. Orange Money RCA : Pour les transferts mobiles locaux. De plus en plus utilisé à Bangui.\n\n4. Banques locales : BSCA, ECOBANK ont des agences à Bangui. Virement bancaire possible mais plus lent.\n\nConseil : Comparer les taux et frais avant d'envoyer.",
+          "updated_at": "2024-01-15",
+          "category": "argent"
+        }
+      ]
+    },
+    {
+      "id": "quotidien",
+      "label": "Vie quotidienne",
+      "icon": "home",
+      "articles": [
+        {
+          "id": "ast_005",
+          "title": "Les quartiers de Bangui",
+          "content": "Bangui compte plusieurs quartiers principaux à connaître :\n\n1. Centre-ville : Zone administrative et commerciale, banques et institutions.\n\n2. Lakouanga : Quartier résidentiel populaire au sud.\n\n3. Gobongo : Zone en développement au nord, plus calme.\n\n4. Marché Central : Cœur économique informel, vivant et coloré.\n\n5. Km5 : Quartier commerçant très animé, attention à la sécurité le soir.",
+          "updated_at": "2024-01-15",
+          "category": "quotidien"
+        }
+      ]
+    },
+    {
+      "id": "demarches",
+      "label": "Démarches administratives",
+      "icon": "description",
+      "articles": [
+        {
+          "id": "ast_006",
+          "title": "Obtenir un acte de naissance ou un passeport",
+          "content": "Pour vos démarches d'état civil en RCA :\n\n1. Acte de naissance : Se rendre à la mairie de la commune de naissance avec une pièce d'identité.\n\n2. Passeport : Direction Générale de la Police aux Frontières à Bangui. Prévoir photos, acte de naissance, frais administratifs.\n\n3. Carte d'identité nationale : Disponible auprès des services du Ministère de l'Intérieur.\n\n4. Délais : Comptez plusieurs semaines selon les périodes. Anticipez vos démarches.",
+          "updated_at": "2024-01-15",
+          "category": "demarches"
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "label": "Business & Entrepreneuriat",
+      "icon": "business",
+      "articles": [
+        {
+          "id": "ast_007",
+          "title": "Créer une entreprise en RCA",
+          "content": "Les étapes principales pour entreprendre en RCA :\n\n1. Choix du statut juridique : Entreprise individuelle, SARL, ou autre selon votre projet.\n\n2. Enregistrement : Auprès du Guichet Unique de Formalités des Entreprises à Bangui.\n\n3. Fiscalité : Se renseigner auprès de la Direction Générale des Impôts sur le régime applicable.\n\n4. Secteurs porteurs : Agriculture, artisanat, commerce, technologies sont des secteurs en développement.\n\nConseil : Se rapprocher de la Chambre de Commerce pour accompagnement.",
+          "updated_at": "2024-01-15",
+          "category": "business"
+        }
+      ]
+    }
+  ]
+}
