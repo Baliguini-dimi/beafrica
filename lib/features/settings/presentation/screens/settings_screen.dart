@@ -51,48 +51,68 @@ class _SettingsScreenState extends State<SettingsScreen> {
             },
           ),
           const Divider(height: 1, indent: 72),
+          // === NOUVELLE TUILE ESPACE VENDEUR ===
+          SettingsTile(
+            icon: Icons.storefront_outlined,
+            title: 'Espace vendeur',
+            subtitle: 'Gérer mes annonces et commandes',
+            onTap: () => context.push(AppRouter.seller),
+          ),
+          const Divider(height: 1, indent: 72),
           // === BANNIÈRE CONNEXION ===
-Consumer(
-  builder: (context, ref, _) {
-    return Container(
-      margin: const EdgeInsets.all(AppSpacing.lg),
-      padding: const EdgeInsets.all(AppSpacing.lg),
-      decoration: BoxDecoration(
-        color: AppColors.primary.withValues(alpha: 0.06),
-        borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
-        border: Border.all(color: AppColors.primary.withValues(alpha: 0.2)),
-      ),
-      child: Row(
-        children: [
-          const Icon(Icons.person_outline, color: AppColors.primary, size: 32),
-          const SizedBox(width: AppSpacing.lg),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Non connecté', style: AppTypography.headlineSmall),
-                const SizedBox(height: 4),
-                Text(
-                  'Connectez-vous pour accéder à toutes les fonctionnalités',
-                  style: AppTypography.bodySmall,
+          Consumer(
+            builder: (context, ref, _) {
+              return Container(
+                margin: const EdgeInsets.all(AppSpacing.lg),
+                padding: const EdgeInsets.all(AppSpacing.lg),
+                decoration: BoxDecoration(
+                  color: AppColors.primary.withValues(alpha: 0.06),
+                  borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+                  border: Border.all(
+                    color: AppColors.primary.withValues(alpha: 0.2),
+                  ),
                 ),
-              ],
-            ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.person_outline,
+                      color: AppColors.primary,
+                      size: 32,
+                    ),
+                    const SizedBox(width: AppSpacing.lg),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Non connecté',
+                            style: AppTypography.headlineSmall,
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Connectez-vous pour accéder à toutes les fonctionnalités',
+                            style: AppTypography.bodySmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: AppSpacing.sm),
+                    ElevatedButton(
+                      onPressed: () => context.push(AppRouter.login),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(80, 36),
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                      ),
+                      child: const Text(
+                        'Connexion',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
           ),
-          const SizedBox(width: AppSpacing.sm),
-          ElevatedButton(
-            onPressed: () => context.push(AppRouter.login),
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(80, 36),
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-            ),
-            child: const Text('Connexion', style: TextStyle(fontSize: 12)),
-          ),
-        ],
-      ),
-    );
-  },
-),
 
           // === SECTION APPARENCE ===
           _SectionHeader(title: 'Apparence'),
@@ -200,9 +220,15 @@ Consumer(
           children: [
             _LanguageOption(label: 'Français', isSelected: true),
             _LanguageOption(
-                label: 'Sango (bientôt)', isSelected: false, disabled: true),
+              label: 'Sango (bientôt)',
+              isSelected: false,
+              disabled: true,
+            ),
             _LanguageOption(
-                label: 'English (bientôt)', isSelected: false, disabled: true),
+              label: 'English (bientôt)',
+              isSelected: false,
+              disabled: true,
+            ),
           ],
         ),
         actions: [

@@ -44,10 +44,15 @@ import '../../features/communaute/presentation/screens/theme_screen.dart';
 import '../../features/communaute/presentation/screens/post_detail_screen.dart';
 import '../../features/communaute/presentation/screens/create_post_screen.dart';
 
-// Screens — Marketplace (nouveaux imports)
+// Screens — Marketplace
 import '../../features/marketplace/presentation/screens/marketplace_screen.dart';
 import '../../features/marketplace/presentation/screens/product_detail_screen.dart';
 import '../../features/marketplace/presentation/screens/cart_screen.dart';
+// Nouveaux imports Marketplace
+import '../../features/marketplace/presentation/screens/add_product_screen.dart';
+import '../../features/marketplace/presentation/screens/seller_screen.dart';
+import '../../features/marketplace/presentation/screens/checkout_screen.dart';
+import '../../features/marketplace/presentation/screens/my_orders_screen.dart';
 
 // Screens — Radio
 import '../../features/radio/presentation/screens/radio_screen.dart';
@@ -107,11 +112,14 @@ class AppRouter {
   static const String about = '/about';
   static const String privacy = '/privacy';
 
-  // === NOUVELLES CONSTANTES POUR LE MARKETPLACE ===
+  // === CONSTANTES MARKETPLACE ===
   static const String productDetail = '/product';
   static const String cart = '/cart';
   static const String checkout = '/checkout';
   static const String addProduct = '/add-product';
+  // Nouvelles constantes Marketplace
+  static const String seller = '/seller';
+  static const String myOrders = '/my-orders';
 
   static final GoRouter router = GoRouter(
     initialLocation: splash,
@@ -152,7 +160,7 @@ class AppRouter {
       ShellRoute(
         builder: (context, state, child) => MainShell(child: child),
         routes: [
-          // Home — vrai écran maintenant
+          // Home
           GoRoute(path: home, builder: (context, state) => const HomeScreen()),
           GoRoute(
             path: medias,
@@ -162,12 +170,12 @@ class AppRouter {
             path: histoire,
             builder: (context, state) => const HistoireScreen(),
           ),
-          // Route Marché remplacée par MarketplaceScreen
+          // Route Marché
           GoRoute(
             path: marche,
             builder: (context, state) => const MarketplaceScreen(),
           ),
-          // Route communautaire réelle
+          // Route Communauté
           GoRoute(
             path: communaute,
             builder: (context, state) => const CommunauteScreen(),
@@ -191,7 +199,6 @@ class AppRouter {
           return PostDetailScreen(postId: postId);
         },
       ),
-      // Route de création de post
       GoRoute(
         path: AppRouter.createPost,
         builder: (context, state) {
@@ -215,7 +222,26 @@ class AppRouter {
         path: AppRouter.cart,
         builder: (context, state) => const CartScreen(),
       ),
-      // Note : les routes checkout et addProduct pourront être ajoutées ultérieurement
+      // Nouvelles routes Marketplace
+      GoRoute(
+        path: AppRouter.checkout,
+        builder: (context, state) => const CheckoutScreen(),
+      ),
+      GoRoute(
+        path: AppRouter.addProduct,
+        builder: (context, state) => const AddProductScreen(),
+      ),
+      GoRoute(
+        path: AppRouter.seller,
+        builder: (context, state) => const SellerScreen(),
+      ),
+      GoRoute(
+        path: AppRouter.myOrders,
+        builder: (context, state) {
+          final mode = state.extra as String? ?? 'buyer';
+          return MyOrdersScreen(mode: mode);
+        },
+      ),
 
       // Routes Histoire
       GoRoute(
@@ -230,10 +256,7 @@ class AppRouter {
         path: royaumes,
         builder: (context, state) => const RoyaumesScreen(),
       ),
-      GoRoute(
-        path: contes,
-        builder: (context, state) => const ContesScreen(),
-      ),
+      GoRoute(path: contes, builder: (context, state) => const ContesScreen()),
       GoRoute(
         path: proverbes,
         builder: (context, state) => const ProverbesScreen(),
@@ -256,10 +279,7 @@ class AppRouter {
         path: artisanat,
         builder: (context, state) => const ArtisanatScreen(),
       ),
-      GoRoute(
-        path: tenues,
-        builder: (context, state) => const TenuesScreen(),
-      ),
+      GoRoute(path: tenues, builder: (context, state) => const TenuesScreen()),
       GoRoute(
         path: astuces,
         builder: (context, state) => const AstucesScreen(),
@@ -279,18 +299,12 @@ class AppRouter {
         path: devises,
         builder: (context, state) => const DevisesScreen(),
       ),
-      GoRoute(
-        path: meteo,
-        builder: (context, state) => const MeteoScreen(),
-      ),
+      GoRoute(path: meteo, builder: (context, state) => const MeteoScreen()),
       GoRoute(
         path: chatbot,
         builder: (context, state) => const ChatbotScreen(),
       ),
-      GoRoute(
-        path: radio,
-        builder: (context, state) => const RadioScreen(),
-      ),
+      GoRoute(path: radio, builder: (context, state) => const RadioScreen()),
       GoRoute(
         path: '/article',
         builder: (context, state) {
