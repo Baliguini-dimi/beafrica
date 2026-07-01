@@ -37,6 +37,12 @@ import '../../features/astuces/presentation/screens/astuces_screen.dart';
 import '../../features/astuces/presentation/screens/astuce_detail_screen.dart';
 import '../../models/astuce_model.dart';
 import '../../features/dictionnaire/presentation/screens/dictionnaire_screen.dart';
+import '../../features/devises/presentation/screens/devises_screen.dart';
+import '../../features/chatbot/presentation/screens/chatbot_screen.dart';
+import '../../features/communaute/presentation/screens/communaute_screen.dart';
+import '../../features/communaute/presentation/screens/theme_screen.dart';
+import '../../features/communaute/presentation/screens/post_detail_screen.dart';
+import '../../features/communaute/presentation/screens/create_post_screen.dart'; // Nouvel import
 
 // Screens — Radio
 import '../../features/radio/presentation/screens/radio_screen.dart';
@@ -72,6 +78,9 @@ class AppRouter {
   static const String histoire = '/histoire';
   static const String marche = '/marche';
   static const String communaute = '/communaute';
+  static const String communauteTheme = '/communaute-theme';
+  static const String postDetail = '/post';
+  static const String createPost = '/create-post';
   static const String culture = '/culture';
   static const String astuces = '/astuces';
   static const String astuceDetail = '/astuce-detail';
@@ -151,15 +160,40 @@ class AppRouter {
               icon: Icons.storefront_outlined,
             ),
           ),
+          // Route communautaire réelle
           GoRoute(
             path: communaute,
-            builder: (context, state) => const ComingSoonScreen(
-              moduleName: 'Communauté',
-              moduleDescription: 'Le forum de la diaspora centrafricaine.',
-              icon: Icons.people_outlined,
-            ),
+            builder: (context, state) => const CommunauteScreen(),
           ),
         ],
+      ),
+
+      // Routes Communauté (hors Shell)
+      GoRoute(
+        path: '${AppRouter.communauteTheme}/:themeId',
+        builder: (context, state) {
+          final themeId = state.pathParameters['themeId']!;
+          final themeLabel = state.extra as String? ?? themeId;
+          return ThemeScreen(themeId: themeId, themeLabel: themeLabel);
+        },
+      ),
+      GoRoute(
+        path: '${AppRouter.postDetail}/:postId',
+        builder: (context, state) {
+          final postId = state.pathParameters['postId']!;
+          return PostDetailScreen(postId: postId);
+        },
+      ),
+      // Route de création de post
+      GoRoute(
+        path: AppRouter.createPost,
+        builder: (context, state) {
+          final extra = state.extra as Map<String, String>;
+          return CreatePostScreen(
+            themeId: extra['themeId']!,
+            themeLabel: extra['themeLabel']!,
+          );
+        },
       ),
 
       // Routes Histoire
@@ -222,11 +256,7 @@ class AppRouter {
       ),
       GoRoute(
         path: devises,
-        builder: (context, state) => const ComingSoonScreen(
-          moduleName: 'Convertisseur Devises',
-          moduleDescription: 'Convertissez entre les monnaies africaines.',
-          icon: Icons.currency_exchange,
-        ),
+        builder: (context, state) => const DevisesScreen(),
       ),
       GoRoute(
         path: meteo,
@@ -234,11 +264,7 @@ class AppRouter {
       ),
       GoRoute(
         path: chatbot,
-        builder: (context, state) => const ComingSoonScreen(
-          moduleName: 'Kôdô — Assistant IA',
-          moduleDescription: 'Votre guide intelligent sur la RCA.',
-          icon: Icons.chat_outlined,
-        ),
+        builder: (context, state) => const ChatbotScreen(),
       ),
       GoRoute(
         path: radio,
