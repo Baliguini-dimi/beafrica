@@ -1,9 +1,11 @@
 // lib/features/home/presentation/screens/home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart'; // Import ajouté
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_spacing.dart';
 import '../../../../core/constants/app_typography.dart';
+import '../../../../core/router/app_router.dart'; // Import ajouté
 import '../widgets/weather_widget.dart';
 import '../widgets/exchange_widget.dart';
 import '../widgets/news_preview_widget.dart';
@@ -67,7 +69,45 @@ class HomeScreen extends ConsumerWidget {
               const SizedBox(height: AppSpacing.md),
               const QuickAccessGrid(),
 
+              // === NOUVELLE CARTE "DÉCOUVRIR PLUS" ===
               const SizedBox(height: AppSpacing.xl),
+              InkWell(
+                onTap: () => context.push(AppRouter.discoverMore),
+                borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+                child: Container(
+                  padding: const EdgeInsets.all(AppSpacing.lg),
+                  decoration: BoxDecoration(
+                    color: AppColors.secondary.withValues(alpha: 0.06),
+                    borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+                    border: Border.all(
+                      color: AppColors.secondary.withValues(alpha: 0.2),
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.auto_awesome_outlined,
+                        color: AppColors.secondary,
+                      ),
+                      const SizedBox(width: AppSpacing.md),
+                      Expanded(
+                        child: Text(
+                          'Découvrir ce qui arrive bientôt',
+                          style: AppTypography.bodyMedium.copyWith(
+                            color: AppColors.secondary,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      const Icon(
+                        Icons.arrow_forward_ios,
+                        size: 14,
+                        color: AppColors.secondary,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
 
               const SizedBox(height: AppSpacing.xxl),
             ],

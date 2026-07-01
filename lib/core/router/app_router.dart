@@ -25,6 +25,8 @@ import '../../features/auth/presentation/screens/forgot_password_screen.dart';
 
 // Screens — Home
 import '../../features/home/presentation/screens/home_screen.dart';
+// Nouvel import pour DiscoverMore
+import '../../features/home/presentation/screens/discover_more_screen.dart';
 
 // Screens — Meteo
 import '../../features/meteo/presentation/screens/meteo_screen.dart';
@@ -48,7 +50,6 @@ import '../../features/communaute/presentation/screens/create_post_screen.dart';
 import '../../features/marketplace/presentation/screens/marketplace_screen.dart';
 import '../../features/marketplace/presentation/screens/product_detail_screen.dart';
 import '../../features/marketplace/presentation/screens/cart_screen.dart';
-// Nouveaux imports Marketplace
 import '../../features/marketplace/presentation/screens/add_product_screen.dart';
 import '../../features/marketplace/presentation/screens/seller_screen.dart';
 import '../../features/marketplace/presentation/screens/checkout_screen.dart';
@@ -117,9 +118,11 @@ class AppRouter {
   static const String cart = '/cart';
   static const String checkout = '/checkout';
   static const String addProduct = '/add-product';
-  // Nouvelles constantes Marketplace
   static const String seller = '/seller';
   static const String myOrders = '/my-orders';
+
+  // === CONSTANTE DISCOVER MORE ===
+  static const String discoverMore = '/discover-more';
 
   static final GoRouter router = GoRouter(
     initialLocation: splash,
@@ -222,7 +225,6 @@ class AppRouter {
         path: AppRouter.cart,
         builder: (context, state) => const CartScreen(),
       ),
-      // Nouvelles routes Marketplace
       GoRoute(
         path: AppRouter.checkout,
         builder: (context, state) => const CheckoutScreen(),
@@ -241,6 +243,12 @@ class AppRouter {
           final mode = state.extra as String? ?? 'buyer';
           return MyOrdersScreen(mode: mode);
         },
+      ),
+
+      // === ROUTE DISCOVER MORE ===
+      GoRoute(
+        path: AppRouter.discoverMore,
+        builder: (context, state) => const DiscoverMoreScreen(),
       ),
 
       // Routes Histoire
