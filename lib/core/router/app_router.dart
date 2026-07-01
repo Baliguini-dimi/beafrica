@@ -42,7 +42,12 @@ import '../../features/chatbot/presentation/screens/chatbot_screen.dart';
 import '../../features/communaute/presentation/screens/communaute_screen.dart';
 import '../../features/communaute/presentation/screens/theme_screen.dart';
 import '../../features/communaute/presentation/screens/post_detail_screen.dart';
-import '../../features/communaute/presentation/screens/create_post_screen.dart'; // Nouvel import
+import '../../features/communaute/presentation/screens/create_post_screen.dart';
+
+// Screens — Marketplace (nouveaux imports)
+import '../../features/marketplace/presentation/screens/marketplace_screen.dart';
+import '../../features/marketplace/presentation/screens/product_detail_screen.dart';
+import '../../features/marketplace/presentation/screens/cart_screen.dart';
 
 // Screens — Radio
 import '../../features/radio/presentation/screens/radio_screen.dart';
@@ -102,6 +107,12 @@ class AppRouter {
   static const String about = '/about';
   static const String privacy = '/privacy';
 
+  // === NOUVELLES CONSTANTES POUR LE MARKETPLACE ===
+  static const String productDetail = '/product';
+  static const String cart = '/cart';
+  static const String checkout = '/checkout';
+  static const String addProduct = '/add-product';
+
   static final GoRouter router = GoRouter(
     initialLocation: splash,
     debugLogDiagnostics: false,
@@ -151,14 +162,10 @@ class AppRouter {
             path: histoire,
             builder: (context, state) => const HistoireScreen(),
           ),
+          // Route Marché remplacée par MarketplaceScreen
           GoRoute(
             path: marche,
-            builder: (context, state) => const ComingSoonScreen(
-              moduleName: 'Marché',
-              moduleDescription:
-                  'Achetez et vendez des produits centrafricains.',
-              icon: Icons.storefront_outlined,
-            ),
+            builder: (context, state) => const MarketplaceScreen(),
           ),
           // Route communautaire réelle
           GoRoute(
@@ -195,6 +202,20 @@ class AppRouter {
           );
         },
       ),
+
+      // === ROUTES MARKETPLACE ===
+      GoRoute(
+        path: '${AppRouter.productDetail}/:productId',
+        builder: (context, state) {
+          final productId = state.pathParameters['productId']!;
+          return ProductDetailScreen(productId: productId);
+        },
+      ),
+      GoRoute(
+        path: AppRouter.cart,
+        builder: (context, state) => const CartScreen(),
+      ),
+      // Note : les routes checkout et addProduct pourront être ajoutées ultérieurement
 
       // Routes Histoire
       GoRoute(
